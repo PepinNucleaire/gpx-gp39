@@ -50,7 +50,11 @@ export default {
           newwpts.push(newwpt);
         });
         const newGpx = new gpx({
-          $: gpxParsed["$"],
+          $: {
+            xmlns: "http://www.topografix.com/GPX/1/1",
+            "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+          },
           metadata: gpxParsed.metadata,
           wpt: newwpts,
         });
