@@ -39,11 +39,11 @@ export default {
               lon: wpt["$"].lon,
               lat: wpt["$"].lat,
             },
-            name: wpt.name,
+            name: wpt.name.toUpperCase(),
             extensions: {
               GP39Symbol: 0,
               GP39Flag: 1,
-              GP39Comment: "",
+              GP39Comment: "1",
               FECColor: 1,
             },
           };
