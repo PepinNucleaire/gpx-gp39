@@ -44,7 +44,7 @@ export default {
               GP39Symbol: 0,
               GP39Flag: 1,
               GP39Comment: "",
-              GP39Color: 1,
+              FECColor: 1,
             },
           };
           newwpts.push(newwpt);
