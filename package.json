@@ -1,0 +1,19 @@
+{
+  "name": "gpx-gp39",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5050"
+  },
+  "dependencies": {
+    "gpx-parser-builder": "^1.0.2",
+    "pinia": "^2.0.11",
+    "simpledotcss": "^2.0.6",
+    "vue": "^3.2.31"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.2.2",
+    "vite": "^2.8.4"
+  }
+}
