@@ -1,5 +1,5 @@
 <script setup>
-import gpx from "gpx-parser-builder";
+import gpx from "./gpx-parser-builder";
 </script>
 
 <template>
@@ -42,9 +42,9 @@ export default {
             name: wpt.name.toUpperCase(),
             extensions: {
               GP39Symbol: 0,
-              GP39Flag: 1,
-              GP39Comment: "1",
               FECColor: 1,
+              GP39Comment: "1",
+              GP39Flag: 1,
             },
           };
           newwpts.push(newwpt);

@@ -7,7 +7,7 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
-    "gpx-parser-builder": "^1.0.2",
+    "isomorphic-xml2js": "^0.1.3",
     "pinia": "^2.0.11",
     "simpledotcss": "^2.0.6",
     "vue": "^3.2.31"

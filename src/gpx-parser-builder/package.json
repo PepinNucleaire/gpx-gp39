@@ -1,0 +1,36 @@
+{
+  "name": "gpx-parser-builder",
+  "version": "1.0.2",
+  "description": "A simple gpx parser and builder between GPX string and JavaScript object",
+  "main": "./src/gpx.js",
+  "scripts": {
+    "test": "mocha --require @babel/register test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kf99916/gpx-parser-builder.git"
+  },
+  "keywords": [
+    "gpx",
+    "parser",
+    "builder"
+  ],
+  "author": "Zheng-Xiang Ke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kf99916/gpx-parser-builder/issues"
+  },
+  "homepage": "https://github.com/kf99916/gpx-parser-builder",
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "@babel/core": "~7.7",
+    "@babel/preset-env": "~7.7",
+    "@babel/register": "~7.7",
+    "mocha": "~6.2"
+  },
+  "dependencies": {
+    "isomorphic-xml2js": "~0.1"
+  }
+}
