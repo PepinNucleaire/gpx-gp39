@@ -70,7 +70,7 @@ export default {
       const blob = new Blob([data], { type: "text/plain" });
       const e = document.createEvent("MouseEvents"),
         a = document.createElement("a");
-      a.download = name + "_GP39.gpx";
+      a.download = "GP39_WptRte.gpx";
       a.href = window.URL.createObjectURL(blob);
       a.dataset.downloadurl = ["text/gpx", a.download, a.href].join(":");
       e.initEvent(
