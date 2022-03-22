@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>					
+<gpx version="1.1">					
+   <wpt lat="43.5143500000" lon="4.1051666667">					
+      <name>L1</name>					
+			<extensions>		
+				<GP39Symbol>0</GP39Symbol>	
+				<FECColor>6</FECColor>	
+				<GP39Comment></GP39Comment>	
+				<GP39Flag>0</GP39Flag>	
+			</extensions>		
+   </wpt>					
+   <wpt lat="43.5155666667" lon="4.1075000000">					
+      <name>L2</name>					
+			<extensions>		
+				<GP39Symbol>0</GP39Symbol>	
+				<FECColor>6</FECColor>	
+				<GP39Comment></GP39Comment>	
+				<GP39Flag>0</GP39Flag>	
+			</extensions>		
+   </wpt>					
+   <wpt lat="43.5440833333" lon="4.1218333333">					
+      <name>L3</name>					
+			<extensions>		
+				<GP39Symbol>0</GP39Symbol>	
+				<FECColor>6</FECColor>	
+				<GP39Comment></GP39Comment>	
+				<GP39Flag>0</GP39Flag>	
+			</extensions>		
+   </wpt>					
+   <wpt lat="43.5493666667" lon="4.1064500000">					
+      <name>L4</name>					
+			<extensions>		
+				<GP39Symbol>0</GP39Symbol>	
+				<FECColor>6</FECColor>	
+				<GP39Comment></GP39Comment>	
+				<GP39Flag>0</GP39Flag>	
+			</extensions>		
+   </wpt>					
+   <wpt lat="43.5530000000" lon="4.0907833333">					
+      <name>L5</name>					
+			<extensions>		
+				<GP39Symbol>0</GP39Symbol>	
+				<FECColor>6</FECColor>	
+				<GP39Comment></GP39Comment>	
+				<GP39Flag>0</GP39Flag>	
+			</extensions>		
+   </wpt>					
+   <wpt lat="43.5544500000" lon="4.0566500000">					
+      <name>L6</name>					
+			<extensions>		
+				<GP39Symbol>0</GP39Symbol>	
+				<FECColor>6</FECColor>	
+				<GP39Comment></GP39Comment>	
+				<GP39Flag>0</GP39Flag>	
+			</extensions>		
+   </wpt>					
+   <wpt lat="43.5502500000" lon="4.0193000000">					
+      <name>L7</name>					
+			<extensions>		
+				<GP39Symbol>0</GP39Symbol>	
+				<FECColor>6</FECColor>	
+				<GP39Comment></GP39Comment>	
+				<GP39Flag>0</GP39Flag>	
+			</extensions>		
+   </wpt>					
+</gpx>					
