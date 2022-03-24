@@ -25,6 +25,30 @@ export default {
     readFile() {
       this.file = this.$refs.file.files[0];
     },
+    checkColor(sym) {
+      if (sym == "Symbol-Pin-Black") {
+        return { color: 0, sym: 1 };
+      }
+      if (sym == "Symbol-Exclamation-Magenta") {
+        return { color: 5, sym: 2 };
+      }
+      if (sym == "Sea-DepthB-Yellowk") {
+        return { color: 2, sym: 2 };
+      }
+      if (sym == "xmgreen") {
+        return { color: 3, sym: 0 };
+      }
+      if (sym == "xmyellow") {
+        return { color: 2, sym: 0 };
+      }
+      if (sym == "xmred") {
+        return { color: 1, sym: 0 };
+      }
+      if (sym == "xmblue") {
+        return { color: 6, sym: 0 };
+      }
+      return { color: 0, sym: 0 };
+    },
     submitFile() {
       const filename = this.file.name;
       let reader = new FileReader();
@@ -41,8 +65,8 @@ export default {
             },
             name: wpt.name.toUpperCase(),
             extensions: {
-              GP39Symbol: 0,
-              FECColor: 1,
+              GP39Symbol: this.checkColor(wpt.sym).symbol,
+              FECColor: this.checkColor(wpt.sym).color,
               GP39Comment: "1",
               GP39Flag: 1,
             },
