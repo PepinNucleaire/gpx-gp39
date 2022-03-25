@@ -63,7 +63,7 @@ export default {
               lon: wpt["$"].lon,
               lat: wpt["$"].lat,
             },
-            name: wpt.name.toUpperCase(),
+            name: wpt.name.toUpperCase().slice(0, 8),
             extensions: {
               GP39Symbol: this.checkColor(wpt.sym).symbol,
               FECColor: this.checkColor(wpt.sym).color,
