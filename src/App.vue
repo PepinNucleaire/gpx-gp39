@@ -98,7 +98,7 @@ export default {
             },
             name: wpt.name.toUpperCase().slice(0, 8),
             extensions: {
-              GP39Symbol: this.checkColor(wpt.sym).symbol,
+              GP39Symbol: this.checkColor(wpt.sym).sym,
               FECColor: this.checkColor(wpt.sym).color,
               GP39Comment: "1",
               GP39Flag: 1,
