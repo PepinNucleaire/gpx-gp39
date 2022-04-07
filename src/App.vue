@@ -59,6 +59,15 @@ export default {
       if (sym == "Sea-DepthB-Yellowk") {
         return { color: 2, sym: 2 };
       }
+      if (sym == "triangle") {
+        return { color: 0, sym: 1 };
+      }
+      if (sym == "square") {
+        return { color: 1, sym: 2 };
+      }
+      if (sym == "circle") {
+        return { color: 0, sym: 4 };
+      }
       if (sym == "xmgreen") {
         return { color: 3, sym: 0 };
       }
