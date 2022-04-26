@@ -78,7 +78,7 @@ export default {
         return { color: 1, sym: 0 };
       }
       if (sym == "xmblue") {
-        return { color: 6, sym: 0 };
+        return { color: 3, sym: 1 };
       }
       return { color: 0, sym: 0 };
     },
