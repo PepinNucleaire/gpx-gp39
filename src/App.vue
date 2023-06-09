@@ -20,7 +20,7 @@ import gpx from "./gpx-parser-builder";
     <p>
       It will automatically transform to a gpx file that can be uploaded to gp39
     </p>
-    <input type="file" ref="file" @change="readFile" />
+    <input type="file" @change="readFile" />
     <button v-if="loading" @click="submitFile">
       <div class="lds-ring">
         <div></div>
