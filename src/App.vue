@@ -20,21 +20,36 @@ import gpx from "./gpx-parser-builder";
     <p>
       It will automatically transform to a gpx file that can be uploaded to gp39
     </p>
-    <input type="file" ref="file" @change="readFile()" />
-    <button @click="submitFile">Upload!</button>
+    <input type="file" ref="file" @change="readFile" />
+    <button v-if="loading" @click="submitFile">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </button>
+
+    <button v-if="!loading" @click="submitFile">
+      Download file for GP39
+    </button>
   </main>
 </template>
 
 <script>
 export default {
   data() {
-    file: "";
-    gpx: {
+    return {
+      file: "",
+      loading: false,
+      gpx: {
+      }
     }
   },
   methods: {
-    readFile() {
-      this.file = this.$refs.file.files[0];
+    readFile(e) {
+      console.log(e)
+      this.file = e.target.files[0];
     },
     checkColor(sym) {
       if (sym == "Symbol-Pin-Black") {
@@ -77,7 +92,14 @@ export default {
         const gpxParsed = gpx.parse(text);
         console.log(gpxParsed.wpt[0]);
         let newwpts = [];
+        let i = 0
         gpxParsed.wpt.map((wpt) => {
+
+          if (!wpt.name) {
+            wpt.name = `z${('0000000' + i).slice(-7)}`
+            i += 1
+          }
+
           const newwpt = {
             $: {
               lon: wpt["$"].lon,
@@ -104,9 +126,10 @@ export default {
         });
         console.log(newGpx);
         this.gpx = newGpx;
+        console.log(this.gpx.toString())
+        this.saveFile(this.gpx.toString(), filename);
       };
       reader.readAsText(this.file);
-      this.saveFile(this.gpx.toString(), filename);
     },
 
     saveFile: function (saving, name) {
@@ -148,5 +171,47 @@ export default {
   padding: 2rem;
 
   font-weight: normal;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 </style>
